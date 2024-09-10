@@ -32,6 +32,9 @@ namespace ComposerLib
         [Signal]
         public delegate void SceneDisposedEventHandler(string sceneName);
 
+        [Signal]
+        public delegate void SceneReplacedEventHandler(string oldSceneName, string newSceneName);
+
         private readonly Loader Loader = new();
         private Godot.Collections.Dictionary<string, Scene> SceneManifest = new();
 
@@ -139,6 +142,8 @@ namespace ComposerLib
 
             RemoveScene(sceneToRemove);
             CreateScene(sceneToAdd);
+
+            EmitSignal(SignalName.SceneReplaced, sceneToRemove, sceneToAdd);
         }
 
         public async void ReloadScene(string name)
