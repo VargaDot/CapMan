@@ -16,8 +16,8 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-Composer="*res://Composer/Composer.cs"
-ComposerGd="*res://Composer/ComposerGD.cs"
+Composer="*res://composer/Composer.cs"
+ComposerGD="*res://composer/ComposerGD.cs"
 
 [dotnet]
 
