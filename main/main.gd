@@ -17,6 +17,7 @@ func _play_game():
 	ComposerGD.ReplaceScene("MainMenu", "Game", self)
 	await Composer.SceneReplaced
 	get_child(0).QuitGame.connect(_quit_game)
+	print("bain was here")
 
 func _quit_game():
 	ComposerGD.ReplaceScene("Game", "MainMenu", self)

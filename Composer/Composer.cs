@@ -144,6 +144,7 @@ namespace ComposerLib
             CreateScene(sceneToAdd);
 
             EmitSignal(SignalName.SceneReplaced, sceneToRemove, sceneToAdd);
+            GD.Print("holy shit");
         }
 
         public async void ReloadScene(string name)
